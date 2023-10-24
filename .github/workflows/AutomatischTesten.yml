@@ -19,19 +19,18 @@ jobs:
         java-version: '17'
 
     - name: Compile Java code
-      run: javac -cp .:unittesten\Unittesten\src\main\Artikel.java
-           javac -cp .:unittesten\Unittesten\src\main\Mitarbeiter.java
-           javac -cp .:unittesten\Unittesten\src\main\Bestellbestaetigung.java
-           javac -cp .:unittesten\Unittesten\src\main\Bestellposten.java
-           javac -cp .:unittesten\Unittesten\src\main\Lagerposten.java
-           javac -cp .:unittesten\Unittesten\src\main\Lagerverwaltung.java
-
-    - name: Run JUnit Tests
       run: javac -cp .:unittesten\Unittesten\test\main\ArtikelTest.java
            javac -cp .:unittesten\Unittesten\test\main\MitarbeiterTest.java
            javac -cp .:unittesten\Unittesten\test\main\BestellbestaetigungTest.java
            javac -cp .:unittesten\Unittesten\test\main\BestellpostenTest.java
            javac -cp .:unittesten\Unittesten\test\main\LagerpostenTest.java
            javac -cp .:unittesten\Unittesten\test\main\LagerverwaltungTest.java
+    - name: Run JUnit Tests
+      run: javac -cp .:unittesten\Unittesten\test\main\ArtikelTest
+           javac -cp .:unittesten\Unittesten\test\main\MitarbeiterTest
+           javac -cp .:unittesten\Unittesten\test\main\BestellbestaetigungTest
+           javac -cp .:unittesten\Unittesten\test\main\BestellpostenTest
+           javac -cp .:unittesten\Unittesten\test\main\LagerpostenTest
+           javac -cp .:unittesten\Unittesten\test\main\LagerverwaltungTest
 
 
