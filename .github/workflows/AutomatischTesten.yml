@@ -20,6 +20,6 @@ jobs:
         distribution: 'liberica'
 
     - name: Compile Java code
-      run: javac -cp .:unittesten\junit-jupiter-api-5.8.2.jar Unittesten\test\main\ArtikelTest.java MitarbeiterTest.java BestellbestaetigungTest.java BestellpostenTest.java LagerpostenTest.java LagerverwaltungTest.java
+      run: javac -cp .:unittesten\Unittesten\test\main\ArtikelTest.java MitarbeiterTest.java BestellbestaetigungTest.java BestellpostenTest.java LagerpostenTest.java LagerverwaltungTest.java
     - name: Run JUnit Tests
       run: javac -cp .:unittesten\junit-jupiter-api-5.8.2.jar org.junit.runner.JUnitCore ArtikelTest MitarbeiterTest BestellbestaetigungTest BestellpostenTest LagerpostenTest LagerverwaltungTest
