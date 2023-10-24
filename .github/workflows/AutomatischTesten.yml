@@ -20,6 +20,6 @@ jobs:
         distribution: 'liberica'
 
     - name: Compile Java code
-      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar -d . unittesten/Unittesten/test/main/ArtikelTest.java
+      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar -cp unittesten/Unittesten/src/main/ -d . unittesten/Unittesten/test/main/ArtikelTest.java
     - name: Run JUnit Tests
       run: java -cp .:unittesten\junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore ArtikelTest
