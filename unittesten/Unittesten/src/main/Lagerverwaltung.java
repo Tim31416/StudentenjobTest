@@ -54,7 +54,7 @@ public class Lagerverwaltung {
 	 */
 
 	public void wareneingangBuchen(Mitarbeiter ma, Artikel a, int anzahl, double preis) {
-		mitarbeiterPruefen(ma);
+		mitarbeiterruefen(ma);
 		Lagerposten neuerPosten = new Lagerposten(a, anzahl, preis);
 		lagerbestand.add(neuerPosten);
 	}
