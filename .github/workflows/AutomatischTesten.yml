@@ -22,4 +22,4 @@ jobs:
     - name: Compile Java code
       run: jar cf test123.jar unittesten/Unittesten/
     - name: Run JUnit Tests
-      run: java -cp. -jar test123.jar:unittesten/junit-platform-console-standalone-1.9.3.jar:org.junit.runner.JUnitCore
+      run: java -cp. -jar test123.jar
