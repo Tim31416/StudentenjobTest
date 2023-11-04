@@ -20,7 +20,7 @@ jobs:
         distribution: 'liberica'
 
     - name: Compile Java code
-      run: jar cfm test123.jar MANIFEST.MF unittesten/Unittesten/
+      run: jar cfm test123.jar unittesten/Unittesten/MANIFEST.MF unittesten/Unittesten/
     - name: Run JUnit Tests
       run: java -jar test123.jar
 #        (your full classpath)                                        (main class)               (your test class)
