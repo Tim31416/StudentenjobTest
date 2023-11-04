@@ -22,4 +22,5 @@ jobs:
     - name: Compile Java code
       run: jar cf test123.jar unittesten/Unittesten/
     - name: Run JUnit Tests
-      run: java -jar test123.jar
+      run: java -cp ./test123.jar org.junit.runner.JUnitCore
+#        (your full classpath)                                        (main class)               (your test class)
