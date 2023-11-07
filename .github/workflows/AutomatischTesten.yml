@@ -22,15 +22,12 @@ jobs:
     - name: Compile Java code
       run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/src/main/*.java
     - name: Create Jar
-      run:  cd ./unittesten/Unittesten/bin/main/
-            jar cf ../../test123.jar .
+      run: jar cf ./unittesten/bin/main/test123.jar -C unittesten/bin/main .
 
            
     - name: Liste JAR-Inhalte auf
       run: jar tf ./unittesten/bin/main/test123.jar
 
-    - name: Gib den Klassenpfad aus
-      run: echo $CLASSPATH
     - name: Run JUnit Tests
       run: java -cp ./unittesten/bin/main/test123.jar:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore AllTests
     #- name: Run JUnit Tests
