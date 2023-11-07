@@ -26,7 +26,7 @@ jobs:
    # - name: Run JUnit Tests
    #   run: java -cp .:junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore
     - name: Compile Java code
-      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/src
+      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/src/main/
     - name: Run JUnit Tests
       
       run: java -cp unittesten/Unittesten/bin:unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore ArtikelTest
