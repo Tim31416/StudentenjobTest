@@ -29,7 +29,7 @@ jobs:
     - name: Gib den Klassenpfad aus
       run: echo $CLASSPATH
     - name: Run JUnit Tests
-      run: java -cp ./unittesten/bin/main/test123.jar:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar  AllTests
+      run: java -cp ./unittesten/bin/main/test123.jar:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar  main.AllTests
     
     #- name: Run JUnit Tests
       
