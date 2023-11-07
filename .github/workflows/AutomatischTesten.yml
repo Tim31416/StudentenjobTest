@@ -24,7 +24,7 @@ jobs:
     - name: Create Jar
       run: jar cf ./unittesten/bin/test123.jar -C unittesten/Unittesten/bin .
     - name: Run JUnit Tests
-      run: java -cp /github/workspace/unittesten/bin/test123.jar org.junit.platform.console.ConsoleLauncher --select-class com.example.AllTests
+      run: java -cp ./unittesten/bin/test123.jar:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore main.AllTests
 
     #- name: Run JUnit Tests
       
