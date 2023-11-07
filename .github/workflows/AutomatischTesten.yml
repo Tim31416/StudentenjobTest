@@ -22,7 +22,7 @@ jobs:
     - name: Compile Java code
       run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/src/main/*.java
     - name: Create Jar
-      run: jar cf ./unittesten/Unittesten/bin test123.jar -C unittesten/Unittesten/bin .
+      run: jar cf /github/workspace/unittesten/Unittesten/bin/test123.jar -C unittesten/Unittesten/bin .
     - name: Run JUnit Tests
       run: java -cp .:junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore
 
