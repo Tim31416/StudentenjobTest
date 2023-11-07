@@ -22,7 +22,9 @@ jobs:
     - name: Compile Java code
       run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/src/main/*.java
     - name: Create Jar
-      run: jar cf ./unittesten/bin/main/test123.jar -C unittesten/bin/main .
+      run:  cd ./unittesten/Unittesten/bin/main/
+            jar cf ../../test123.jar .
+
            
     - name: Liste JAR-Inhalte auf
       run: jar tf ./unittesten/bin/main/test123.jar
