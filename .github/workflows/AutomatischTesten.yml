@@ -20,9 +20,9 @@ jobs:
         distribution: 'liberica'
 
     - name: Compile Java code
-      run: javac 
+      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin 
     - name: Create Jar
-      run: jar cfm test123.jar unittesten/Unittesten/MANIFEST.MF unittesten/Unittesten/src/main
+      run: jar cfm test123.jar unittesten/Unittesten/MANIFEST.MF unittesten/Unittesten/bin
     - name: Run JUnit Tests
       run: java -cp .:junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore
 #        (your full classpath)                                        (main class)               (your test class)
