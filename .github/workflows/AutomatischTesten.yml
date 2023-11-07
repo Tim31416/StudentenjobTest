@@ -19,10 +19,15 @@ jobs:
         java-version: '17'
         distribution: 'liberica'
 
+    #- name: Compile Java code
+   #   run: javac unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/main 
+   # - name: Create Jar
+   #   run: jar cfm test123.jar unittesten/Unittesten/MANIFEST.MF unittesten/Unittesten/bin
+   # - name: Run JUnit Tests
+   #   run: java -cp .:junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore
     - name: Compile Java code
-      run: javac unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/main 
-    - name: Create Jar
-      run: jar cfm test123.jar unittesten/Unittesten/MANIFEST.MF unittesten/Unittesten/bin
+      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/ -d unittesten/Unittesten/bin unittesten/Unittesten/test/main/ArtikelTest.java
     - name: Run JUnit Tests
-      run: java -cp .:junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore
+      
+      run: java -cp unittesten/Unittesten/bin:unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore ArtikelTest
 #        (your full classpath)                                        (main class)               (your test class)
