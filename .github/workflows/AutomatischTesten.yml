@@ -25,7 +25,7 @@ jobs:
       run: jar cf ./unittesten/bin/test123.jar -C unittesten/Unittesten/bin .
     - name: Run JUnit Tests
       run: java -cp ./unittesten/bin/test123.jar:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore main.AllTests
-
+    
     #- name: Run JUnit Tests
       
       #run: java -cp unittesten/Unittesten/bin:unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore ArtikelTest
