@@ -30,7 +30,4 @@ jobs:
 
     - name: Run JUnit Tests
       run: java -jar unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar --class-path ./unittesten/bin/main/test123.jar --select-package=main
-    #- name: Run JUnit Tests
-      
-      #run: java -cp unittesten/Unittesten/bin:unittesten/junit-platform-console-standalone-1.9.3.jar org.junit.runner.JUnitCore ArtikelTest
-#        (your full classpath)                                        (main class)               (your test class)
+   
