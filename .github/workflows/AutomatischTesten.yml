@@ -20,7 +20,7 @@ jobs:
         distribution: 'liberica'
 
     - name: Compile Java code
-      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/:unittesten/Unittesten/test/ -d unittesten/bin/main unittesten/Unittesten/src/main/*.java unittestem/Unittesten/test/main/ArtikelTest.java
+      run: javac -cp .:unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar:unittesten/Unittesten/src/:unittesten/Unittesten/test/ -d unittesten/bin/main unittesten/Unittesten/*/main/*.java 
     - name: Create Jar
       run: jar cf ./unittesten/bin/main/test123.jar -C unittesten/bin/main .
 
