@@ -25,8 +25,8 @@ jobs:
       run: jar cf ./unittesten/bin/main/test123.jar -C unittesten/bin/main .
 
            
-    - name: Liste JAR-Inhalte auf
-      run: jar tf ./unittesten/bin/main/test123.jar
+#    - name: Liste JAR-Inhalte auf
+#      run: jar tf ./unittesten/bin/main/test123.jar
 
     - name: Run JUnit Tests
       run: java -jar unittesten/Unittesten/junit-platform-console-standalone-1.9.3.jar --class-path ./unittesten/bin/main/test123.jar --select-package=main
